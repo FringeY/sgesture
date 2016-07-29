@@ -13,11 +13,10 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          plugins: ['transform-runtime', 'transform-decorators-legacy'],
           presets: ['es2015', 'stage-0', 'react'],
         },
       },
