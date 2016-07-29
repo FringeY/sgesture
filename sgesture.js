@@ -101,7 +101,7 @@ class Gesture {
       this.swipe(e, { direction });
       return;
     }
-    if (!this.lastTapPos) {
+    if (!this.lastTapPos && this.now - this.last < 300) {
       if (Math.abs($1.pageX - this.lastTapPos.x) < 30
       && Math.abs($1.pageY - this.lastTapPos.Y) < 30
       ) {
